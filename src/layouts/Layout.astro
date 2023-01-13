@@ -1,0 +1,52 @@
+---
+export interface Props {
+	title: string;
+}
+import "@fontsource/fraunces";
+import "@fontsource/rubik";
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root{
+		/*catpuccin*/
+		--white: #eff1f5;
+		--white-02: #dce0e8;
+		--black: #1e1e2e;
+		--black-02: #181825;
+		--faded: #4c4f69;
+		--maroon: hsla(355,76%,59%); /*link*/
+		--maroon-darken: hsla(355,76%,49%); /*link*/
+		--primary: hsla(316, 74%, 69%, 1);
+		--secondary: hsla(266, 85%, 58%, 1);
+		--tertiary: hsla(189, 70%, 42%, 1);
+		--accent: hsla(230, 97%, 72%, 1); 
+
+		--sans: "Rubik", "Helvetica", "Arial", sans-serif
+		--serif: "Fraunces", "Times New Roman", "Georgia", serif
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		font: 400 16px/1.4 "Rubik", "Helvetica", "Arial", sans-serif;
+		background-color: var(--white);
+		color:var(--black)
+	}
+
+</style>
