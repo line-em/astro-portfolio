@@ -1,3 +1,24 @@
+header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-block: 20px 70px;
+	gap: 20px;
+}
+
+header.left,
+header.right {
+	justify-content: flex-start;
+	transform: translateX(-50px);
+	margin-block: 30px;
+}
+
+header.right {
+	justify-content: flex-end;
+	transform: translateX(50px);
+}
+
 h1,
 h2 {
 	font-weight: 800;
@@ -45,6 +66,10 @@ h2::before {
 	z-index: -1;
 }
 
+h2::before {
+	top: 17px;
+}
+
 header svg {
 	background-color: var(--pure-white);
 	box-shadow: var(--shadow-elevation-low);
@@ -55,19 +80,4 @@ header svg {
 .bigger {
 	font-size: 4rem;
 	display: block;
-}
-
-header {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	margin-block: 20px 70px;
-	gap: 20px;
-}
-
-header.left {
-	justify-content: flex-start;
-	transform: translateX(-50px);
-	margin-block: 40px;
 }
