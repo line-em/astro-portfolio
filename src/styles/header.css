@@ -11,7 +11,7 @@ header.left,
 header.right {
 	justify-content: flex-start;
 	transform: translateX(-50px);
-	margin-block: 30px;
+	margin-block: 40px;
 }
 
 header.right {
