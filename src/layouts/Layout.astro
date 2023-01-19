@@ -17,8 +17,40 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body transition-style="in:circle:hesitate" class="finisher-header">
 		<slot />
+		<script src="finisher-header.es5.min.js" type="text/javascript" is:inline></script>
+		<script type="text/javascript" is:inline>
+			new FinisherHeader({
+				count: 25,
+				size: {
+					min: 2,
+					max: 40,
+					pulse: 0
+				},
+				speed: {
+					x: {
+						min: 0,
+						max: 0.8
+					},
+					y: {
+						min: 0,
+						max: 0.2
+					}
+				},
+				colors: {
+					background: "#dce0e8",
+					particles: ["#ff926b", "#87ddfe", "#acaaff", "#1bffc2", "#f9a5fe"]
+				},
+				blending: "screen",
+				opacity: {
+					center: 1,
+					edge: 1
+				},
+				skew: -1,
+				shapes: ["c", "s", "t"]
+			});
+		</script>
 	</body>
 </html>
 
@@ -56,28 +88,32 @@ const { title } = Astro.props;
 	html {
 		font: 400 16px/1.4 "Rubik", "Helvetica", "Arial", sans-serif;
 		color: var(--black);
+		scroll-behavior: smooth;
+	}
+
+	::selection {
+		background-color: var(--maroon);
 	}
 
 	body {
-		background-image: image("./bg.png", var(--white));
+		/* background-image: image("./bg.png", var(--white)); */
 		/* background-image: url("./bg.png"); */
-		background-attachment: scroll;
-		background-position: 0;
+		/* background-attachment: scroll; */
+		/* background-position: 0;
 		background-repeat: repeat-y;
-		background-size: 50vh;
+		background-size: 50vh; */
 		/* background-color: var(--white); */
 		margin: 0;
 		display: grid;
 		/* grid-template-rows: 60px 1fr;
 		grid-template-columns: 1fr minmax(auto, 70ch) 1fr; */
-		grid-template: 60px 1fr / repeat(2, minmax(0px, 1fr)) minmax(auto, 70ch) repeat(
-				2,
-				minmax(0px, 1fr)
-			);
+		grid-template:
+			60px 1fr 60px / minmax(0px, 1fr) minmax(auto, 70ch)
+			minmax(0px, 1fr);
 		grid-template-areas:
-			"nav nav nav nav nav"
-			". expanded content expanded ."
-			"footer footer footer footer footer";
+			"nav nav nav"
+			". content ."
+			"footer footer footer";
 	}
 
 	strong {
@@ -88,5 +124,34 @@ const { title } = Astro.props;
 		background-image: linear-gradient(to right, var(--primary), var(--tertiary));
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+	}
+
+	@keyframes circle-in-hesitate {
+		0% {
+			clip-path: circle(0%);
+		}
+		40% {
+			clip-path: circle(40%);
+		}
+		100% {
+			clip-path: circle(125%);
+		}
+	}
+
+	[transition-style="in:circle:hesitate"] {
+		animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+	}
+
+	@keyframes circle-in-center {
+		from {
+			clip-path: circle(0%);
+		}
+		to {
+			clip-path: circle(125%);
+		}
+	}
+
+	[transition-style="in:circle:center"] {
+		animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
 	}
 </style>
