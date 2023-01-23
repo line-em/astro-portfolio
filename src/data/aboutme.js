@@ -3,7 +3,9 @@ export default {
 	occupation: "Front-End Developer",
 	location: "Porto, Portugal",
 	email: "alineemily.dev@gmail.com",
+	email_link: "mailto:alineemily.dev@gmail.com",
 	github: "line-em",
+	github_link: "github.com/line-em",
 	linkedIn: "alineemily",
 
 	funfacts: [
