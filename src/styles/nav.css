@@ -46,7 +46,7 @@ li > a::before {
 	content: "";
 	width: 100%;
 	height: 3px;
-	background: var(--white-02);
+	background: var(--white-darker);
 	border-radius: 500px;
 	transform: rotate(3deg);
 	transition: bottom ease 300ms, transform ease 300ms;

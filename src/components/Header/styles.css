@@ -7,16 +7,9 @@ header {
 	gap: 20px;
 }
 
-header.left,
-header.right {
+header.left {
 	justify-content: flex-start;
-	transform: translateX(-50px);
 	margin-block: 40px;
-}
-
-header.right {
-	justify-content: flex-end;
-	transform: translateX(50px);
 }
 
 h1,
