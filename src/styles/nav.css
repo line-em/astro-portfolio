@@ -6,7 +6,7 @@ nav {
 	align-items: center;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
 	nav {
 		margin: 0 1rem;
 	}
@@ -17,8 +17,28 @@ nav h2::after {
 	display: inline;
 }
 
+nav h2 {
+	max-width: min-content;
+	line-height: 1;
+	padding: 5px;
+}
+
+nav h2::after {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 nav h2::before {
 	display: none;
+}
+
+ul.mobile-menu {
+	display: none;
+}
+
+ul.big-menu {
+	display: flex;
 }
 
 ul {

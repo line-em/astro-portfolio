@@ -1,5 +1,5 @@
 import React from "react";
-import { User, HandWaving } from "phosphor-react";
+import { User, HandWaving, Envelope, FolderNotchOpen, Wrench } from "phosphor-react";
 import Header from "./Header";
 
 export const Welcome = () => {
@@ -20,13 +20,13 @@ export const About = () => {
 };
 
 export const Projects = () => {
-	return <Header.Section icon={<User />}>Projects</Header.Section>;
+	return <Header.Section icon={<FolderNotchOpen />}>Projects</Header.Section>;
 };
 
 export const Contact = () => {
-	return <Header.Section icon={<User />}>Contact Me</Header.Section>;
+	return <Header.Section icon={<Envelope />}>Contact Me</Header.Section>;
 };
 
 export const Toolkit = () => {
-	return <Header.Section icon={<User />}>Toolkit</Header.Section>;
+	return <Header.Section icon={<Wrench />}>Toolkit</Header.Section>;
 };

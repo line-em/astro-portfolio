@@ -80,12 +80,24 @@ const { title } = Astro.props;
 		margin: 0;
 		display: grid;
 		grid-template:
-			60px 1fr 60px / minmax(0px, 1fr) minmax(auto, 70ch)
+			100px 1fr 70px / minmax(0px, 1fr) minmax(auto, 70ch)
 			minmax(0px, 1fr);
 		grid-template-areas:
 			"nav nav nav"
 			". content ."
 			"footer footer footer";
+	}
+
+	@media screen and (min-width: 1024px) {
+		body {
+			grid-template-columns:
+				minmax(0px, 1fr) minmax(auto, 10ch) minmax(auto, 70ch) minmax(auto, 10ch)
+				minmax(0px, 1fr);
+			grid-template-areas:
+				"nav nav nav nav nav"
+				". content content content ."
+				"footer footer footer footer footer";
+		}
 	}
 
 	strong {
