@@ -21,11 +21,13 @@ h2 {
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2rem;
+	font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
+	font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
 }
 
 h1::after,
@@ -63,6 +65,20 @@ h2::before {
 	top: 17px;
 }
 
+@media screen and (max-width: 790px) {
+	h1::after,
+	h2::after {
+		left: -10px;
+		width: 115%;
+	}
+	h1::before,
+	h2::before {
+		width: 115%;
+		top: 22px;
+		left: 5px;
+	}
+}
+
 header svg {
 	background-color: var(--pure-white);
 	box-shadow: var(--shadow-elevation-low);
@@ -71,6 +87,6 @@ header svg {
 }
 
 .bigger {
-	font-size: 4rem;
-	display: block;
+	font-size: 3rem;
+	font-size: clamp(3rem, 2.8rem + 1vw, 4rem);
 }

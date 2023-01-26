@@ -16,13 +16,13 @@ import { About, Projects, Welcome } from "../components/Header/Components";
 			/>
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		<ul role="list" class="link-card-grid">
+		<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://astro.build/chat/"
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
+		</ul> -->
 	</main>
 </Layout>
 
@@ -30,6 +30,13 @@ import { About, Projects, Welcome } from "../components/Header/Components";
 	main {
 		grid-area: content;
 		padding: 1.5rem;
+	}
+
+	@media screen and (max-width: 400px) {
+		main {
+			grid-area: content;
+			padding: 1rem;
+		}
 	}
 
 	.instructions {

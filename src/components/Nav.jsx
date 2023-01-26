@@ -5,13 +5,18 @@ import "../styles/nav.css";
 const Nav = () => {
 	return (
 		<nav>
+			<h2>Aline Emily.</h2>
 			<ul>
 				<li>
 					<User weight="duotone" size={24} color="var(--secondary)" />
 					<a href="">About Me</a>
 				</li>
 				<li>
-					<FolderNotchOpen weight="duotone" size={24} color="var(--secondary)" />
+					<FolderNotchOpen
+						weight="duotone"
+						size={24}
+						color="var(--secondary)"
+					/>
 					<a href="">Projects</a>
 				</li>
 				<li>
