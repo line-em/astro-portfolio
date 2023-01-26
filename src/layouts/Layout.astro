@@ -104,6 +104,22 @@ const { title } = Astro.props;
 		font-weight: 800;
 	}
 
+	button {
+		background-color: var(--pure-white);
+		box-shadow: var(--shadow-elevation-low);
+		border-radius: 4px;
+		padding: 4px;
+		border: 2px solid transparent;
+		transition: 200ms ease;
+		cursor: pointer;
+	}
+
+	button:hover {
+		border: 2px solid var(--secondary);
+		background-color: var(--white-alpha);
+		transform: translateY(-2px);
+	}
+
 	.text-gradient {
 		background-image: linear-gradient(to right, var(--primary), var(--tertiary));
 		-webkit-background-clip: text;

@@ -33,12 +33,22 @@ nav h2::before {
 	display: none;
 }
 
-ul.mobile-menu {
-	display: none;
+button.mobile-menu {
+	display: flex;
 }
 
 ul.big-menu {
-	display: flex;
+	display: none;
+}
+
+@media screen and (min-width: 680px) {
+	button.mobile-menu {
+		display: none;
+	}
+
+	ul.big-menu {
+		display: flex;
+	}
 }
 
 ul {
@@ -98,4 +108,33 @@ li > a:hover::before {
 	bottom: -4px;
 	background: var(--accent);
 	transform: rotate(0deg);
+}
+
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	right: 0;
+	top: 0;
+	background-color: var(--white);
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+ul.overlay-content {
+	position: relative;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	font-size: 1.5rem;
+	padding: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.full-screen {
+	width: 100vw;
 }
