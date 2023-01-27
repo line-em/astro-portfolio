@@ -17,7 +17,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body transition-style="in:circle:center" class="finisher-header">
+	<body transition-style="in:square:hesitate" class="finisher-header">
 		<slot />
 		<script src="finisher-header.es5.min.js" type="text/javascript" is:inline
 		></script>
@@ -77,6 +77,8 @@ const { title } = Astro.props;
 
 	body {
 		background-image: linear-gradient(to left, var(--white), var(--white-alpha));
+		background-size: 100vh;
+		background-attachment: fixed;
 		margin: 0;
 		display: grid;
 		grid-template:
@@ -126,32 +128,19 @@ const { title } = Astro.props;
 		-webkit-text-fill-color: transparent;
 	}
 
-	@keyframes circle-in-hesitate {
+	@keyframes square-in-hesitate {
 		0% {
-			clip-path: circle(0%);
+			clip-path: inset(100% 100% 100% 100%);
 		}
 		40% {
-			clip-path: circle(40%);
+			clip-path: inset(33% 33% 33% 33%);
 		}
 		100% {
-			clip-path: circle(125%);
+			clip-path: inset(0 0 0 0);
 		}
 	}
 
-	[transition-style="in:circle:hesitate"] {
-		animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
-	}
-
-	@keyframes circle-in-center {
-		from {
-			clip-path: circle(0%);
-		}
-		to {
-			clip-path: circle(125%);
-		}
-	}
-
-	[transition-style="in:circle:center"] {
-		animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-center both;
+	[transition-style="in:square:hesitate"] {
+		animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-hesitate both;
 	}
 </style>
