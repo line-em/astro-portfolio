@@ -3,11 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav";
 import sanitizeHtml from "sanitize-html";
-import { About, Projects, Welcome } from "../components/Header/Components";
+import { About, Projects, Welcome, Toolkit } from "../components/Header/Components";
 import data from "../data/aboutme";
-const { description, funfacts } = data;
+import tools from "../data/tools";
+import { log } from "astro/dist/core/logger/core";
+let { description, funfacts } = data;
 const sanitizedDesc = sanitizeHtml(description);
-console.log(sanitizedDesc);
+console.log(tools[0].text);
 ---
 
 <Layout title="Aline's Portfolio">
@@ -16,18 +18,42 @@ console.log(sanitizedDesc);
 		<Welcome />
 		<About />
 		<section class="about-grid">
-			<p class="headline span2" set:html={sanitizedDesc} />
+			<article class="headline span2">
+				<p set:html={sanitizedDesc} />
+				<hr />
+				<strong>Check my socials</strong>
+			</article>
 			<img src="./profile.png" alt="Aline Emily" />
-			{funfacts.map((fact) => <article class="headline">{fact}</article>)}
+			{
+				funfacts.map((fact) => (
+					<article class="headline">
+						<p>{fact}</p>
+					</article>
+				))
+			}
 		</section>
+		<Toolkit />
+		<article class="headline">
+			<section class="tech-grid">
+				{
+					tools.map((tool) => (
+						<article>
+							<img src={tool.src} />
+							<abbr title={tool.abbr}>{tool.text}</abbr>
+						</article>
+					))
+				}
+			</section>
+		</article>
+
 		<Projects />
-		<!-- <ul role="list" class="link-card-grid">
+		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://astro.build/chat/"
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul> -->
+		</ul>
 		Also this portfolio, built with Astro and JSX!
 	</main>
 </Layout>
@@ -59,6 +85,9 @@ console.log(sanitizedDesc);
 		color: var(--accent);
 	}
 
+	.headline p {
+		margin: 0;
+	}
 	.about-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(22ch, 1fr));
@@ -72,6 +101,33 @@ console.log(sanitizedDesc);
 
 	.about-grid img {
 		max-width: 100%;
+	}
+
+	section.tech-grid {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 1.2rem 1rem;
+	}
+
+	.tech-grid * {
+		flex: none;
+	}
+
+	abbr {
+		text-decoration: none;
+	}
+
+	.tech-grid > article {
+		display: grid;
+		gap: 10px;
+		overflow: hidden;
+		grid-template-columns: 35px auto;
+		align-items: center;
+	}
+
+	section.tech-grid img {
+		max-width: 40px;
 	}
 
 	@media screen and (max-width: 1023px) {
