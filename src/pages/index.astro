@@ -2,7 +2,12 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav";
+import sanitizeHtml from "sanitize-html";
 import { About, Projects, Welcome } from "../components/Header/Components";
+import data from "../data/aboutme";
+const { description, funfacts } = data;
+const sanitizedDesc = sanitizeHtml(description);
+console.log(sanitizedDesc);
 ---
 
 <Layout title="Aline's Portfolio">
@@ -10,12 +15,12 @@ import { About, Projects, Welcome } from "../components/Header/Components";
 	<main>
 		<Welcome />
 		<About />
+		<section class="about-grid">
+			<p class="headline span2" set:html={sanitizedDesc} />
+			<img src="./profile.png" alt="Aline Emily" />
+			{funfacts.map((fact) => <article class="headline">{fact}</article>)}
+		</section>
 		<Projects />
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
 		<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://astro.build/chat/"
@@ -40,29 +45,60 @@ import { About, Projects, Welcome } from "../components/Header/Components";
 		}
 	}
 
-	.instructions {
+	.headline {
 		line-height: 1.6;
-		margin: 1rem 0;
 		border: 1px solid rgba(var(--accent), 25%);
 		background-color: white;
 		padding: 1rem;
 		border-radius: 0.4rem;
+		margin: 1rem auto;
+		box-shadow: var(--shadow-elevation-low);
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+
+	.headline strong {
+		color: var(--accent);
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
+
+	.about-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(22ch, 1fr));
+		gap: 0 1rem;
 		padding: 0;
+	}
+
+	.span2 {
+		grid-column: span 2;
+	}
+
+	.about-grid img {
+		max-width: 100%;
+	}
+
+	@media screen and (max-width: 1023px) {
+		.about-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+		.about-grid img {
+			order: 1;
+			align-self: center;
+			justify-self: center;
+			max-width: 55%;
+		}
+	}
+
+	@media screen and (max-width: 550px) {
+		.about-grid img {
+			max-width: 100%;
+		}
+	}
+
+	@media screen and (max-width: 368px) {
+		.about-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.span2 {
+			grid-column: span 1;
+		}
 	}
 </style>

@@ -69,11 +69,11 @@ h2::before {
 	h1::after,
 	h2::after {
 		left: -10px;
-		width: 115%;
+		width: 105%;
 	}
 	h1::before,
 	h2::before {
-		width: 115%;
+		width: 105%;
 		top: 22px;
 		left: 5px;
 	}

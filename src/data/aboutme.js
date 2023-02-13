@@ -9,20 +9,18 @@ export default {
 	linkedIn: "alineemily",
 
 	funfacts: [
-		`💻 My very first experience with coding was a long time ago, making some
-					fansites of things I liked when I was a kid, before HTML5! It's wonderful to see
-					how things evolved since then, and I'm really glad I've picked up programming
-					again.`,
+		`💻 My first experience with coding was a long time ago, making
+					fansites of things I liked back when I was a kid. Even before HTML5!`,
 		`🎮 I love books, games and animation. I also already worked with games in the
-					past!`,
+					past! Fantasy and Sci-Fi are something I adore.`,
 		`🐱 I love spending time with my cat, Leia, the rebel princess herself! She's one
-					talkative kitten.`
+					talkative kitten, who loves a good nap.`
 	],
 
 	description: `I'm Aline, a <strong>front-end developer</strong> currently based in Portugal,
-				building web applications using React and looking for a{" "}
-				<strong>career change</strong>. I love delivering good and{" "}
-				<strong>responsive user interfaces</strong> and I'm ready to tackle more challenges!{" "}
+				building web applications using React and looking for a 
+				<strong>career change</strong>. I love delivering good and
+				<strong>responsive user interfaces</strong> and I'm ready to tackle more challenges!
 				<strong>I enjoy CSS</strong>, and it's one of the things I'm most excited to work
 				with and get better at.`
 };
