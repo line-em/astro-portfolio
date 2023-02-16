@@ -4,12 +4,12 @@ export default [
 		title: "Netflix Clone",
 		description:
 			"A Netflix Clone with a personal touch. I used Tailwind and Firebase, specially Auth and Databases. I added modals, customizable homepage with various random categories, useRef, loading and error states, toast notifications, customizable alerts with Sweet Alert, extra hover and active effects like CSS transforms, and more.",
-		tech: ["React", "REST API", "Tailwind", "CSS Grid", "Firebase"],
+		tech: ["React", "REST API", "Tailwind", "CSS Grid", "Firebase", "Modals"],
 		image: [
-			`https://webdevamin.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdmf2pac9w%2Fimage%2Fupload%2Fv1669052910%2Fbakiji_construct_portfolio_fe4005b9f4.png&w=2048&q=75`,
-			`${import.meta.env.BASE_URL}/project/quizzical.png`,
-			`${import.meta.env.BASE_URL}/project/quizzical2.png`,
-			`${import.meta.env.BASE_URL}/project/quizzical3.png`
+			`./projects/netflix (1).png`,
+			`./projects/netflix (2).png`,
+			`./projects/netflix (3).png`,
+			`./projects/netflix (4).png`
 		],
 		github: "https://github.com/line-em/react-netflix",
 		live: "https://line-em.github.io/react-netflix/"
@@ -43,9 +43,9 @@ export default [
 			"Modals"
 		],
 		image: [
-			`${import.meta.env.BASE_URL}/project/catpics1.png`,
-			`${import.meta.env.BASE_URL}/project/catpics2.png`,
-			`${import.meta.env.BASE_URL}/project/catpics3.png`
+			`./projects/catpics (1).png`,
+			`./projects/catpics (2).png`,
+			`./projects/catpics (3).png`
 		],
 		github: "https://github.com/line-em/catpics-e-commerce",
 		live: "https://line-em.github.io/catpics-e-commerce/"
