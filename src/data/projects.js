@@ -21,9 +21,9 @@ export default [
 			"I wanted to explore how filtering an existing API would be like, and decided to use it for a roleplaying game called Dungeons and Dragons. You can filter through the Spellbook by choosing classes and different schools of magic, showing the results of your query, and then expanding those results in its own page. I faced several challenges - how to paginate, how to sanitize data, how to render markdown, how to avoid unnecessary API calls, among others. There are still challenges to overcome, but it's on its version 1.0 and I'm pretty proud on how it turned out so far!",
 		tech: [
 			"React",
+			"Filtering",
 			"Styled Components",
 			"REST API",
-			"Filtering",
 			"Axios",
 			"React Router DOM"
 		],

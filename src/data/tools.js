@@ -62,20 +62,13 @@ export default [
 		abbr: "REST APIs",
 		src: "https://www.svgrepo.com/show/353904/insomnia.svg",
 		altText: "Insomnia Icon",
-		text: "REST APIs / JSON"
+		text: "REST APIs"
 	},
 	{
 		id: 10,
 		abbr: "Tailwind CSS",
 		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
 		altText: "Tailwind CSS",
-		text: "Tailwind CSS"
-	},
-	{
-		id: 10,
-		abbr: "Some Other",
-		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-		altText: "Tailwind CSS",
-		text: "Tailwind CSS"
+		text: "Tailwind"
 	}
 ];

@@ -1,15 +1,33 @@
 import React from "react";
 import "../styles/card.css";
+import { DotsThree, Info } from "phosphor-react";
 
 const Card = ({ id, title, description, tech, image, github, live }) => {
 	return (
-		<article key={id} className="link-card">
-			{/* <img src={image[0]} alt={title} /> */}
-			<h3>{title}</h3>
-			{/* {tech.map((item) => item + ",")} */}
-			<a href="texte">Read More</a>
-			<button>Github</button>
-			<button>Live</button>
+		<article key={id} className="card">
+			<section className="img-section">
+				<img src={image[0]} alt={title} />
+			</section>
+			<section className="text-section">
+				<h3 className="text-gradient">
+					{title}
+					<div className="info-icon">
+						<DotsThree color="var(--accent)" size={30} weight="duotone" />
+					</div>
+				</h3>
+				<section className="pill-section">
+					{tech.map((item) => (
+						<div>{item}</div>
+					))}
+				</section>
+				<section className="buttons-section">
+					{" "}
+					{/* <p>{description}</p> */}
+					<button>Read More</button>
+					<button>Github</button>
+					<button>Live</button>
+				</section>
+			</section>{" "}
 		</article>
 	);
 };

@@ -39,8 +39,11 @@ const { title } = Astro.props;
 		--primary: hsla(316, 74%, 69%, 1);
 		--primary-02: hsla(316, 74%, 69%, 0.5);
 		--secondary: hsla(266, 85%, 58%, 1);
+		--secondary-02: hsla(266, 85%, 58%, 0.5);
 		--tertiary: hsla(189, 70%, 42%, 1);
+		--tertiary-02: hsla(189, 70%, 42%, 0.5);
 		--accent: hsla(230, 97%, 72%, 1);
+		--accent-02: hsla(230, 97%, 72%, 0.5);
 
 		/*shadow josh*/
 		--shadow-color: 0deg 0% 73%;
@@ -106,20 +109,36 @@ const { title } = Astro.props;
 		font-weight: 800;
 	}
 
+	hr {
+		border: none;
+		border-bottom: 2px dotted var(--accent);
+	}
+
 	button {
-		background-color: var(--pure-white);
+		background-color: var(--accent);
 		box-shadow: var(--shadow-elevation-low);
+		color: var(--white);
+		border: none;
 		border-radius: 4px;
-		padding: 4px;
-		border: 2px solid transparent;
+		padding: 4px 8px;
 		transition: 200ms ease;
 		cursor: pointer;
 	}
 
 	button:hover {
+		background-color: var(--tertiary);
+		transform: translateY(-2px);
+	}
+
+	nav button {
+		background-color: var(--pure-white);
+		padding: 4px;
+		border: 2px solid transparent;
+	}
+
+	nav button:hover {
 		border: 2px solid var(--secondary);
 		background-color: var(--white-alpha);
-		transform: translateY(-2px);
 	}
 
 	.text-gradient {

@@ -1,41 +1,76 @@
-.link-card {
-	list-style: none;
-	display: flex;
-	padding: 0.15rem;
-	background-color: white;
-	background-image: var(--accent-gradient);
-	background-size: 400%;
-	border-radius: 0.5rem;
-	background-position: 100%;
-	transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+.card {
+	display: grid;
+	flex-basis: 30%;
+	grid-template-rows: 160px 1fr;
+	gap: 10px;
+	transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.link-card > a {
-	width: 100%;
-	text-decoration: none;
-	line-height: 1.4;
+.card:hover {
+	transform: translateY(-0.2em);
+}
+
+.text-section {
+	border-radius: 4px;
+	background-color: var(--pure-white);
+	box-shadow: var(--shadow-elevation-low);
 	padding: 1rem 1.3rem;
-	border-radius: 0.35rem;
-	color: #111;
-	background-color: white;
-	opacity: 0.8;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
-h2 {
+
+.text-section h3 {
 	margin: 0;
-	font-size: 1.25rem;
-	transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
-p {
-	margin-top: 0.5rem;
-	margin-bottom: 0;
-	color: #444;
+	margin-bottom: 0.5rem;
+	position: relative;
+	width: 100%;
 }
 
-.link-card:is(:hover, :focus-within) {
-	background-position: 0;
+.info-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
-.link-card:is(:hover, :focus-within) h2 {
-	color: rgb(var(--accent));
+.img-section {
+	overflow: hidden;
+	border-radius: 4px;
+	cursor: pointer;
+	object-fit: cover;
+}
+
+.img-section img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.pill-section {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 0.75rem;
+	gap: 3px;
+}
+
+.pill-section div {
+	background-color: var(--accent-02);
+	color: var(--black);
+	padding: 3px 5px;
+	border-radius: 4px;
+}
+
+.pill-section div:nth-child(2n) {
+	background-color: var(--primary-02);
+}
+
+.pill-section div:nth-child(3n) {
+	background-color: var(--tertiary-02);
+}
+
+.buttons-section {
+	display: flex;
+	border-top: 2px dotted var(--accent);
+	gap: 10px;
+	padding-top: 10px;
+	margin-top: 10px;
 }

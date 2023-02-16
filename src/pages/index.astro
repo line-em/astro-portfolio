@@ -6,10 +6,8 @@ import sanitizeHtml from "sanitize-html";
 import { About, Projects, Welcome, Toolkit } from "../components/Header/Components";
 import data from "../data/aboutme";
 import tools from "../data/tools";
-import { log } from "astro/dist/core/logger/core";
 let { description, funfacts } = data;
 const sanitizedDesc = sanitizeHtml(description);
-console.log(tools[0].text);
 ---
 
 <Layout title="Aline's Portfolio">
@@ -22,6 +20,8 @@ console.log(tools[0].text);
 				<p set:html={sanitizedDesc} />
 				<hr />
 				<strong>Check my socials</strong>
+				<button>Github</button>
+				<button>Linkedin</button>
 			</article>
 			<img src="./profile.png" alt="Aline Emily" />
 			{
@@ -54,7 +54,7 @@ console.log(tools[0].text);
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
 		</ul>
-		Also this portfolio, built with Astro and JSX!
+		Also this portfolio, built with Astro!
 	</main>
 </Layout>
 
