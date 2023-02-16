@@ -75,5 +75,20 @@ export default [
 		],
 		github: "https://github.com/line-em/react-weather-app",
 		live: "https://line-em.github.io/react-weather-app/"
+	},
+	{
+		id: 5,
+		title: "Spellbook",
+		description:
+			"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
+		tech: ["React", "Axios"],
+		image: [
+			`./projects/spellbook (1).png`,
+			`./projects/spellbook (2).png`,
+			`./projects/spellbook (3).png`,
+			`./projects/spellbook (4).png`
+		],
+		github: "https://github.com/line-em/dnd-spellbook/",
+		live: "https://line-em.github.io/dnd-spellbook/"
 	}
 ];
