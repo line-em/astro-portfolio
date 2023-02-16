@@ -16,21 +16,42 @@ export default [
 	},
 	{
 		id: 1,
+		title: "Spellbook",
+		description:
+			"I wanted to explore how filtering an existing API would be like, and decided to use it for a roleplaying game called Dungeons and Dragons. You can filter through the Spellbook by choosing classes and different schools of magic, showing the results of your query, and then expanding those results in its own page. I faced several challenges - how to paginate, how to sanitize data, how to render markdown, how to avoid unnecessary API calls, among others. There are still challenges to overcome, but it's on its version 1.0 and I'm pretty proud on how it turned out so far!",
+		tech: [
+			"React",
+			"Styled Components",
+			"REST API",
+			"Filtering",
+			"Axios",
+			"React Router DOM"
+		],
+		image: [
+			`./projects/spellbook (1).png`,
+			`./projects/spellbook (2).png`,
+			`./projects/spellbook (3).png`,
+			`./projects/spellbook (4).png`
+		],
+		github: "https://github.com/line-em/dnd-spellbook/",
+		live: "https://line-em.github.io/dnd-spellbook/"
+	},
+	{
+		id: 2,
 		title: "Quizzical",
 		description:
 			"Generate customized quizzes and check how you've fared! It gathers data from an API and validates it. The app has a light and a dark mode, an animated svg background, and various visual feedbacks depending on user state! It also celebrates your victory 🎉",
-		tech: ["React", "Javascript", "Open Trivia API", "CSS Grid", "CSS animation"],
+		tech: ["React", "Javascript", "REST API", "CSS Grid", "CSS animation"],
 		image: [
-			`https://webdevamin.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdmf2pac9w%2Fimage%2Fupload%2Fv1669052910%2Fbakiji_construct_portfolio_fe4005b9f4.png&w=2048&q=75`,
-			`${import.meta.env.BASE_URL}/project/quizzical.png`,
-			`${import.meta.env.BASE_URL}/project/quizzical2.png`,
-			`${import.meta.env.BASE_URL}/project/quizzical3.png`
+			`./projects/quizzical.png`,
+			`./projects/quizzical2.png`,
+			`./projects/quizzical3.png`
 		],
 		github: "https://github.com/line-em/Quizzical",
 		live: "https://line-em.github.io/Quizzical/"
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "Cat Pics E-commerce",
 		description:
 			"This is an e-commerce website using useContext. It generates various Cat Prints with random titles and prices, with the fun Cat API! I made a CSS Modal, used the reliable React Router Dom and had fun with CSS Grid again.",
@@ -51,44 +72,31 @@ export default [
 		live: "https://line-em.github.io/catpics-e-commerce/"
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "Todo App",
 		description:
-			"Refactoring my old plain Javascript one with React was enlightening. Even if it is a simple project, I feel like I learned a lot with it! You can create, filter, edit, complete and delete data, and it also saves data to Local Storage. Lastly, you can switch between the light and dark theme!",
-		tech: ["React", "Local Storage"],
+			"Refactoring my old plain Javascript TODO app with React was enlightening. You can create, filter, edit, complete and delete data, and it also saves data to Local Storage. Lastly, you can switch between the light and dark theme.",
+		tech: ["React", "Local Storage", "CRUD"],
 		image: [
-			`${import.meta.env.BASE_URL}/project/todo.png`,
-			`${import.meta.env.BASE_URL}/project/todo2.png`
+			`./projects/todo (1).png`,
+			`./projects/todo (2).png`,
+			`./projects/todo (3).png`
 		],
 		github: "https://github.com/line-em/react-to-do",
 		live: "https://line-em.github.io/react-to-do/"
-	},
-	{
-		id: 4,
-		title: "Weather App",
-		description:
-			"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
-		tech: ["React", "Axios"],
-		image: [
-			`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
-			`${import.meta.env.BASE_URL}/project/weatherapp3.png`
-		],
-		github: "https://github.com/line-em/react-weather-app",
-		live: "https://line-em.github.io/react-weather-app/"
-	},
-	{
-		id: 5,
-		title: "Spellbook",
-		description:
-			"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
-		tech: ["React", "Axios"],
-		image: [
-			`./projects/spellbook (1).png`,
-			`./projects/spellbook (2).png`,
-			`./projects/spellbook (3).png`,
-			`./projects/spellbook (4).png`
-		],
-		github: "https://github.com/line-em/dnd-spellbook/",
-		live: "https://line-em.github.io/dnd-spellbook/"
 	}
+	// {
+	// 	id: 4,
+	// 	title: "Weather App",
+	// 	description:
+	// 		"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
+	// 	tech: ["React", "Axios"],
+	// 	image: [
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp.png`,
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp3.png`
+	// 	],
+	// 	github: "https://github.com/line-em/react-weather-app",
+	// 	live: "https://line-em.github.io/react-weather-app/"
+	// },
 ];
