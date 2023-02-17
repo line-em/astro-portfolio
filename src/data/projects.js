@@ -89,7 +89,7 @@ export default [
 		id: 5,
 		title: "Portfolio",
 		description: "This Portfolio App! Made for simplicity, responsiveness, etc.",
-		tech: ["React", "Astro", "Modals", "Responsive"],
+		tech: ["React", "Astro", "EmailJS", "Modals", "Responsive"],
 		image: [`./projects/portfolio.png`],
 		github: "https://github.com/line-em/astro-portfolio",
 		live: "https://line-em.github.io/react-to-do/"
