@@ -125,6 +125,7 @@ const { title } = Astro.props;
 
 	button,
 	.about-grid a,
+	.contact-grid a,
 	.card a {
 		background-color: var(--accent);
 		box-shadow: var(--shadow-elevation-low);
@@ -140,13 +141,15 @@ const { title } = Astro.props;
 	@media (hover: hover) and (pointer: fine) {
 		button:hover,
 		.about-grid a:hover,
-		.card a:hover {
+		.card a:hover,
+		.contact-grid a:hover {
 			background-color: var(--tertiary);
 			transform: translateY(-2px);
 		}
 
 		.about-grid a:hover,
-		.card a:hover {
+		.card a:hover,
+		.contact-grid a:hover {
 			color: var(--pure-white);
 		}
 

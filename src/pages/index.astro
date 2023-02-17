@@ -13,6 +13,7 @@ import {
 import tools from "../data/tools";
 import "../styles/index.css";
 import ContactForm from "../components/ContactForm";
+import SocialLinks from "../components/SocialLinks.astro";
 ---
 
 <Layout title="Aline's Portfolio">
@@ -42,6 +43,20 @@ import ContactForm from "../components/ContactForm";
 		<Projects />
 		<ProjectCards />
 		<Contact />
-		<ContactForm client:visible />
+		<section class="contact-grid">
+			<div class="headline">
+				<h3>Drop me a line!</h3>
+				<br />
+				<p>
+					If you wish to talk to me about any opportunities or projects, feel
+					free to reach out to me via the <strong>contact form</strong>, or
+					through the following social media.
+				</p>
+				<p>Thank you!</p>
+				<hr />
+				<SocialLinks />
+			</div>
+			<ContactForm client:visible />
+		</section>
 	</main>
 </Layout>

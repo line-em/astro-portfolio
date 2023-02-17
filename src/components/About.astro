@@ -1,8 +1,8 @@
 ---
 import sanitizeHtml from "sanitize-html";
 import data from "../data/aboutme";
-let { description, funfacts, linkedIn_link, github_link, email_name, email_domain } =
-	data;
+import SocialLinks from "./SocialLinks.astro";
+let { description, funfacts } = data;
 const sanitizedDesc = sanitizeHtml(description);
 ---
 
@@ -17,19 +17,8 @@ const sanitizedDesc = sanitizeHtml(description);
 		<p set:html={sanitizedDesc} />
 		<hr />
 		<strong>Find me at...</strong>
-		<section class="links">
-			<a href={linkedIn_link} target="_blank" rel="noopener noreferrer">Linkedin</a>
-			<a href={github_link} target="_blank" rel="noopener noreferrer">Github</a>
-			<a
-				href={`mailto:${email_name}@${email_domain}`}
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				E-mail
-			</a>
-		</section>
+		<SocialLinks />
 	</article>
-
 	{
 		funfacts.map((fact, index) => (
 			<article

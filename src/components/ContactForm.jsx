@@ -26,7 +26,7 @@ const ContactForm = () => {
 	};
 
 	return (
-		<form ref={formRef} onSubmit={(e) => sendEmail(e)}>
+		<form ref={formRef} onSubmit={(e) => sendEmail(e)} className="headline">
 			<fieldset>
 				<label htmlFor="name" className="text-gradient">
 					Name

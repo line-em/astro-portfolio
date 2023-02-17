@@ -29,7 +29,7 @@ const Nav = () => {
 				</a>
 			</li>
 			<li>
-				<a href="#socials" onClick={closeMenuAfterClick}>
+				<a href="#contact" onClick={closeMenuAfterClick}>
 					Socials
 				</a>
 			</li>

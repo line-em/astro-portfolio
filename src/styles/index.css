@@ -29,11 +29,25 @@ main {
 	margin: 0;
 }
 
-.about-grid {
+.about-grid,
+.contact-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(22ch, 1fr));
 	gap: 0 1rem;
 	padding: 0;
+}
+
+.contact-grid {
+	grid-template-columns: 1fr 2fr;
+}
+
+.contact-grid h3 {
+	margin: 0;
+}
+
+.contact-grid .links {
+	justify-content: flex-start;
+	margin-block-start: 1rem;
 }
 
 .main-info {
@@ -45,14 +59,14 @@ main {
 }
 
 section.tech-grid,
-.about-grid .links {
+.links {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	gap: 1.2rem 1rem;
 }
 
-.about-grid .links {
+.links {
 	margin-block-start: 0.5rem;
 }
 
@@ -77,9 +91,14 @@ section.tech-grid img {
 }
 
 @media screen and (max-width: 1023px) {
+	.contact-grid > :first-child {
+		max-width: 50vw;
+	}
+
 	.about-grid {
 		grid-template-columns: 1fr 1fr;
 	}
+
 	.about-grid img {
 		align-self: center;
 		justify-self: center;
@@ -94,12 +113,27 @@ section.tech-grid img {
 	}
 }
 
+@media screen and (min-width: 600px) and (max-width: 700px) {
+	.contact-grid > :first-child {
+		min-width: 40vw;
+	}
+}
+
 @media screen and (max-width: 600px) {
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-grid > :first-child {
+		max-width: 100%;
+	}
+
 	.about-grid img {
 		max-width: 50%;
 		grid-column: span 2;
 		margin-block: -2rem -1rem;
 	}
+
 	.main-info {
 		grid-column: span 2;
 	}
