@@ -4,6 +4,19 @@ main {
 	z-index: 3;
 }
 
+footer {
+	grid-area: footer;
+	display: flex;
+	margin: 0 3rem 1rem;
+	justify-content: space-between;
+	color: var(--faded);
+}
+
+footer > * {
+	margin: 0;
+	padding: 10px;
+}
+
 @media screen and (max-width: 400px) {
 	main {
 		grid-area: content;
