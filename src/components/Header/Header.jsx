@@ -1,6 +1,6 @@
 import React from "react";
 import { IconContext } from "phosphor-react";
-import "./styles.css";
+import "../../styles/header.css";
 
 const Header = ({ children, direction = "" }) => {
 	return <header className={direction === "left" ? "left" : ""}>{children}</header>;

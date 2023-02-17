@@ -19,8 +19,10 @@
 	}
 }
 
-.card:hover {
-	transform: translateY(-0.2em);
+@media (hover: hover) and (pointer: fine) {
+	.card:hover {
+		transform: translateY(-0.2em);
+	}
 }
 
 .text-section {
