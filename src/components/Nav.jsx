@@ -4,22 +4,34 @@ import "../styles/nav.css";
 
 const Nav = () => {
 	const [toggleMobileMenu, setToggleMobileMenu] = React.useState(false);
+
+	const closeMenuAfterClick = () =>
+		toggleMobileMenu ? setToggleMobileMenu(!toggleMobileMenu) : null;
+
 	const menuItems = (
 		<>
 			<li>
 				<User weight="duotone" size={24} color="var(--secondary)" />
-				<a href="">About Me</a>
+				<a href="#about" onClick={closeMenuAfterClick}>
+					About Me
+				</a>
 			</li>
 			<li>
 				<FolderNotchOpen weight="duotone" size={24} color="var(--secondary)" />
-				<a href="">Projects</a>
+				<a href="#projects" onClick={closeMenuAfterClick}>
+					Projects
+				</a>
 			</li>
 			<li>
 				<Envelope weight="duotone" size={24} color="var(--secondary)" />
-				<a href="">Contact</a>
+				<a href="#contact" onClick={closeMenuAfterClick}>
+					Contact
+				</a>
 			</li>
 			<li>
-				<a href="">Socials</a>
+				<a href="#socials" onClick={closeMenuAfterClick}>
+					Socials
+				</a>
 			</li>
 		</>
 	);

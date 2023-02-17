@@ -3,7 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Nav from "../components/Nav";
 import AboutSection from "../components/About.astro";
-import { About, Projects, Welcome, Toolkit } from "../components/Header/Components";
+import {
+	About,
+	Projects,
+	Welcome,
+	Toolkit,
+	Contact
+} from "../components/Header/Components";
 import tools from "../data/tools";
 import "../styles/index.css";
 ---
@@ -32,10 +38,8 @@ import "../styles/index.css";
 				}
 			</section>
 		</article>
-
 		<Projects />
-		<section role="list">
-			<Card />
-		</section>
+		<Card />
+		<Contact />
 	</main>
 </Layout>

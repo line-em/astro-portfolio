@@ -4,11 +4,7 @@ import { DotsThree, Info } from "phosphor-react";
 
 const Card = ({ id, title, description, tech, image, github, live }) => {
 	return (
-		<article
-			key={id}
-			className="card"
-			data-aos={`fade-${id % 2 === 1 ? "down" : "up"}`}
-		>
+		<article className="card" data-aos={`fade-${id % 2 === 1 ? "down" : "up"}`}>
 			<section className="img-section">
 				<img src={image[0]} alt={title} />
 			</section>
@@ -20,16 +16,18 @@ const Card = ({ id, title, description, tech, image, github, live }) => {
 					</div>
 				</h3>
 				<section className="pill-section">
-					{tech.map((item) => (
-						<div>{item}</div>
+					{tech.map((item, index) => (
+						<div key={index}>{item}</div>
 					))}
 				</section>
 				<section className="buttons-section">
-					{" "}
-					{/* <p>{description}</p> */}
 					<button>Read More</button>
-					<button>Github</button>
-					<button>Live</button>
+					<a href={github} target="_blank" rel="noopener noreferrer">
+						Github
+					</a>
+					<a href={live} target="_blank" rel="noopener noreferrer">
+						Live
+					</a>
 				</section>
 			</section>{" "}
 		</article>

@@ -19,15 +19,27 @@ export const Welcome = () => {
 };
 
 export const About = () => {
-	return <Header.Section icon={<User />}>About Me</Header.Section>;
+	return (
+		<Header.Section icon={<User />}>
+			<span id="about">About Me</span>
+		</Header.Section>
+	);
 };
 
 export const Projects = () => {
-	return <Header.Section icon={<FolderNotchOpen />}>Projects</Header.Section>;
+	return (
+		<Header.Section icon={<FolderNotchOpen />}>
+			<span id="projects">Projects</span>
+		</Header.Section>
+	);
 };
 
 export const Contact = () => {
-	return <Header.Section icon={<Envelope />}>Contact Me</Header.Section>;
+	return (
+		<Header.Section icon={<Envelope />}>
+			<span id="contact">Contact</span>
+		</Header.Section>
+	);
 };
 
 export const Toolkit = () => {
