@@ -76,7 +76,7 @@ export default [
 		title: "Todo App",
 		description:
 			"Refactoring my old plain Javascript TODO app with React was enlightening. You can create, filter, edit, complete and delete data, and it also saves data to Local Storage. Lastly, you can switch between the light and dark theme.",
-		tech: ["React", "Local Storage", "CRUD"],
+		tech: ["React", "Local Storage", "CRUD", "Dark Theme"],
 		image: [
 			`./projects/todo (1).png`,
 			`./projects/todo (2).png`,
