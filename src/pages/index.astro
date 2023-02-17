@@ -56,7 +56,12 @@ import SocialLinks from "../components/SocialLinks.astro";
 				<hr />
 				<SocialLinks />
 			</div>
-			<ContactForm client:visible />
+			<ContactForm
+				client:visible
+				code={import.meta.env.EMAIL_CODE}
+				template={import.meta.env.EMAIL_TEMPLATE}
+				api={import.meta.env.EMAIL_API_KEY}
+			/>
 		</section>
 	</main>
 	<footer>

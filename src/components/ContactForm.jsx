@@ -2,31 +2,24 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
 
-const ContactForm = () => {
+const ContactForm = ({ code, template, api }) => {
 	const formRef = useRef();
 	const [sentSuccess, setSentSuccess] = useState(false);
 
 	const sendEmail = (e) => {
 		setSentSuccess(false);
 		e.preventDefault();
-		emailjs
-			.sendForm(
-				"service_wt1n5fr",
-				"template_ej104ab",
-				formRef.current,
-				"F9Y_vVQS1p8Uu3uud"
-			)
-			.then(
-				(result) => {
-					e.target.reset();
-					console.log(result.text);
-					if (result.text === "OK") setSentSuccess(true);
-				},
-				(error) => {
-					console.log(error.text);
-					setSentSuccess(false);
-				}
-			);
+		emailjs.sendForm(code, template, formRef.current, api).then(
+			(result) => {
+				e.target.reset();
+				console.log(result.text);
+				if (result.text === "OK") setSentSuccess(true);
+			},
+			(error) => {
+				console.log(error.text);
+				setSentSuccess(false);
+			}
+		);
 	};
 
 	return (
