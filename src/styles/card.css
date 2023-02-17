@@ -6,6 +6,19 @@
 	transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+@media screen and (max-width: 1028px) {
+	.card {
+		flex-basis: 45%;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.card {
+		flex-basis: 95%;
+		grid-template-rows: 170px 1fr;
+	}
+}
+
 .card:hover {
 	transform: translateY(-0.2em);
 }

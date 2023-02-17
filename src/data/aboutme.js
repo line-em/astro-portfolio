@@ -5,8 +5,8 @@ export default {
 	email: "alineemily.dev@gmail.com",
 	email_link: "mailto:alineemily.dev@gmail.com",
 	github: "line-em",
-	github_link: "github.com/line-em",
-	linkedIn: "alineemily",
+	github_link: "https://github.com/line-em",
+	linkedIn_link: "https://www.linkedin.com/in/alineemily/",
 
 	funfacts: [
 		`💻 My first experience with coding was a long time ago, making

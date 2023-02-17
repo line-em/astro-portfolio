@@ -6,7 +6,7 @@ import sanitizeHtml from "sanitize-html";
 import { About, Projects, Welcome, Toolkit } from "../components/Header/Components";
 import data from "../data/aboutme";
 import tools from "../data/tools";
-let { description, funfacts } = data;
+let { description, funfacts, linkedIn_link, github_link, email_link } = data;
 const sanitizedDesc = sanitizeHtml(description);
 ---
 
@@ -16,17 +16,27 @@ const sanitizedDesc = sanitizeHtml(description);
 		<Welcome />
 		<About />
 		<section class="about-grid">
-			<article class="headline span2">
+			<img src="./profile.png" alt="Aline Emily" />
+			<article class="headline main-info">
 				<p set:html={sanitizedDesc} />
 				<hr />
-				<strong>Check my socials</strong>
-				<button>Github</button>
-				<button>Linkedin</button>
+				<strong>Find me at...</strong>
+				<section class="links">
+					<a href={linkedIn_link} target="_blank" rel="noopener noreferrer">
+						Linkedin
+					</a>
+					<a href={github_link} target="_blank" rel="noopener noreferrer">
+						Github
+					</a>
+					<a href={email_link} target="_blank" rel="noopener noreferrer">
+						E-mail
+					</a>
+				</section>
 			</article>
-			<img src="./profile.png" alt="Aline Emily" />
+
 			{
 				funfacts.map((fact) => (
-					<article class="headline">
+					<article class="headline funfacts">
 						<p>{fact}</p>
 					</article>
 				))
@@ -47,14 +57,13 @@ const sanitizedDesc = sanitizeHtml(description);
 		</article>
 
 		<Projects />
-		<ul role="list" class="link-card-grid">
+		<section role="list" class="link-card-grid">
 			<Card
 				href="https://astro.build/chat/"
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
-		Also this portfolio, built with Astro!
+		</section>
 	</main>
 </Layout>
 
@@ -62,6 +71,7 @@ const sanitizedDesc = sanitizeHtml(description);
 	main {
 		grid-area: content;
 		padding: 1.5rem;
+		z-index: 3;
 	}
 
 	@media screen and (max-width: 400px) {
@@ -88,6 +98,7 @@ const sanitizedDesc = sanitizeHtml(description);
 	.headline p {
 		margin: 0;
 	}
+
 	.about-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(22ch, 1fr));
@@ -95,7 +106,7 @@ const sanitizedDesc = sanitizeHtml(description);
 		padding: 0;
 	}
 
-	.span2 {
+	.main-info {
 		grid-column: span 2;
 	}
 
@@ -103,11 +114,16 @@ const sanitizedDesc = sanitizeHtml(description);
 		max-width: 100%;
 	}
 
-	section.tech-grid {
+	section.tech-grid,
+	.about-grid .links {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
 		gap: 1.2rem 1rem;
+	}
+
+	.about-grid .links {
+		margin-block-start: 0.5rem;
 	}
 
 	.tech-grid * {
@@ -135,16 +151,33 @@ const sanitizedDesc = sanitizeHtml(description);
 			grid-template-columns: 1fr 1fr;
 		}
 		.about-grid img {
-			order: 1;
 			align-self: center;
 			justify-self: center;
-			max-width: 55%;
+		}
+
+		.main-info {
+			grid-column: span 1;
+		}
+
+		.funfacts:last-of-type {
+			grid-column: span 2;
 		}
 	}
 
-	@media screen and (max-width: 550px) {
+	@media screen and (max-width: 600px) {
 		.about-grid img {
-			max-width: 100%;
+			max-width: 50%;
+			grid-column: span 2;
+			margin-block: -2rem -1rem;
+		}
+		.main-info {
+			grid-column: span 2;
+		}
+	}
+
+	@media screen and (max-width: 450px) {
+		.about-grid img {
+			max-width: 70%;
 		}
 	}
 
@@ -153,7 +186,15 @@ const sanitizedDesc = sanitizeHtml(description);
 			grid-template-columns: 1fr;
 		}
 
-		.span2 {
+		.main-info {
+			grid-column: span 1;
+		}
+
+		.about-grid img {
+			max-width: 80%;
+			grid-column: span 1;
+		}
+		.funfacts:last-of-type {
 			grid-column: span 1;
 		}
 	}

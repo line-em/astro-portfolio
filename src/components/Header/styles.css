@@ -4,6 +4,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	margin-block: 20px 70px;
+	z-index: 200;
 	gap: 20px;
 }
 
