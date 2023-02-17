@@ -1,12 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
 
 const ContactForm = () => {
 	const formRef = useRef();
+	const [sentSuccess, setSentSuccess] = useState(false);
 
 	const sendEmail = (e) => {
-		console.log("first");
+		setSentSuccess(false);
 		e.preventDefault();
 		emailjs
 			.sendForm(
@@ -17,10 +18,13 @@ const ContactForm = () => {
 			)
 			.then(
 				(result) => {
+					e.target.reset();
 					console.log(result.text);
+					if (result.text === "OK") setSentSuccess(true);
 				},
 				(error) => {
 					console.log(error.text);
+					setSentSuccess(false);
 				}
 			);
 	};
@@ -40,7 +44,9 @@ const ContactForm = () => {
 				/>
 			</fieldset>
 			<fieldset>
-				<label htmlFor="email">Email</label>
+				<label htmlFor="email" className="text-gradient">
+					Email
+				</label>
 				<input
 					type="email"
 					name="email"
@@ -52,7 +58,9 @@ const ContactForm = () => {
 				<p className="error-message">Please enter a valid e-mail address.</p>
 			</fieldset>
 			<fieldset>
-				<label htmlFor="message">Message</label>
+				<label htmlFor="message" className="text-gradient">
+					Message
+				</label>
 				<textarea
 					name="message"
 					id="message"
@@ -61,14 +69,9 @@ const ContactForm = () => {
 				/>
 			</fieldset>
 			<fieldset className="center">
-				<button
-					type="submit"
-					className="button_style border_style text-white extra-padding-x"
-				>
-					Send
-				</button>
+				<button type="submit">Send</button>
 			</fieldset>
-			<h2 className="text-white">Message sent! 🥳</h2>
+			{sentSuccess && <h2 className="text-white">Message sent! 🥳</h2>}
 		</form>
 	);
 };
