@@ -9,7 +9,10 @@ export const Welcome = () => {
 				<HandWaving weight="duotone" size={85} color="var(--primary)" />
 			</Header.Icon>
 			<Header.Text>
-				<div className="bigger">Hey there,</div> nice to meet you!
+				<div className="bigger">Hey there,</div>
+				<div data-aos="fade-left" data-aos-delay="400" data-aos-duration="600">
+					nice to meet you!
+				</div>
 			</Header.Text>
 		</Header>
 	);

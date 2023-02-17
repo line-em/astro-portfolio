@@ -27,10 +27,12 @@ const HeaderSection = ({ icon, children }) => {
 				weight: "duotone"
 			}}
 		>
-			<Header direction="left">
-				<Header.Icon>{icon}</Header.Icon>
-				<Header.Subtitle>{children}</Header.Subtitle>
-			</Header>
+			<div data-aos="fade-left">
+				<Header direction="left">
+					<Header.Icon>{icon}</Header.Icon>
+					<Header.Subtitle>{children}</Header.Subtitle>
+				</Header>
+			</div>
 		</IconContext.Provider>
 	);
 };

@@ -4,7 +4,11 @@ import { DotsThree, Info } from "phosphor-react";
 
 const Card = ({ id, title, description, tech, image, github, live }) => {
 	return (
-		<article key={id} className="card">
+		<article
+			key={id}
+			className="card"
+			data-aos={`fade-${id % 2 === 1 ? "down" : "up"}`}
+		>
 			<section className="img-section">
 				<img src={image[0]} alt={title} />
 			</section>

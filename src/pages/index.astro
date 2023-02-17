@@ -10,14 +10,24 @@ let { description, funfacts, linkedIn_link, github_link, email_link } = data;
 const sanitizedDesc = sanitizeHtml(description);
 ---
 
+<script src="https://unpkg.com/aos@next/dist/aos.js" is:inline></script>
+<script>
+	AOS.init();
+</script>
+;
 <Layout title="Aline's Portfolio">
 	<Nav client:idle />
-	<main>
+	<main data-aos="fade-up" data-aos-duration="1000">
 		<Welcome />
 		<About />
 		<section class="about-grid">
-			<img src="./profile.png" alt="Aline Emily" />
-			<article class="headline main-info">
+			<img
+				src="./profile.png"
+				alt="Aline Emily"
+				data-aos="fade-right"
+				data-aos-delay="200"
+			/>
+			<article class="headline main-info" data-aos="fade-left" data-aos-delay="400">
 				<p set:html={sanitizedDesc} />
 				<hr />
 				<strong>Find me at...</strong>
@@ -35,15 +45,23 @@ const sanitizedDesc = sanitizeHtml(description);
 			</article>
 
 			{
-				funfacts.map((fact) => (
-					<article class="headline funfacts">
+				funfacts.map((fact, index) => (
+					<article
+						class="headline funfacts"
+						data-aos={`fade-${index === 1 ? "down" : "up"}`}
+					>
 						<p>{fact}</p>
 					</article>
 				))
 			}
 		</section>
 		<Toolkit />
-		<article class="headline">
+		<article
+			class="headline"
+			data-aos="fade-right"
+			data-aos-delay="50"
+			data-aos-easing="ease-in-out"
+		>
 			<section class="tech-grid">
 				{
 					tools.map((tool) => (
@@ -57,12 +75,8 @@ const sanitizedDesc = sanitizeHtml(description);
 		</article>
 
 		<Projects />
-		<section role="list" class="link-card-grid">
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+		<section role="list">
+			<Card />
 		</section>
 	</main>
 </Layout>
