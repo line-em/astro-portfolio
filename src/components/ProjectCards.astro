@@ -4,7 +4,7 @@ import Card from "./Card";
 ---
 
 <section class="projects-grid">
-	{projects.map((item) => <Card {...item} key={item.id} />)}
+	{projects.map((item) => <Card {...item} key={item.id} client:visible />)}
 </section>
 
 <style>
