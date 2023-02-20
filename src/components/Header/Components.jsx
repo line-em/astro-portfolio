@@ -10,7 +10,9 @@ export const Welcome = () => {
 			</Header.Icon>
 			<Header.Text>
 				<div className="bigger">Hey there,</div>
-				<div>nice to meet you!</div>
+				<div data-aos="fade-left" data-aos-delay="400" data-aos-duration="600">
+					nice to meet you!
+				</div>
 			</Header.Text>
 		</Header>
 	);
