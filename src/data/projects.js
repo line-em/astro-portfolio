@@ -6,10 +6,10 @@ export default [
 			"A Netflix Clone with a personal touch. I used Tailwind and Firebase, specially Auth and Databases. I added modals, customizable homepage with various random categories, useRef, loading and error states, toast notifications, customizable alerts with Sweet Alert, extra hover and active effects like CSS transforms, and more.",
 		tech: ["React", "REST API", "Tailwind", "CSS Grid", "Firebase", "Modals"],
 		image: [
-			`./projects/netflix (1).webp`,
-			`./projects/netflix (2).webp`,
-			`./projects/netflix (3).webp`,
-			`./projects/netflix (4).webp`
+			`./projects/netflix (1).png`,
+			`./projects/netflix (2).png`,
+			`./projects/netflix (3).png`,
+			`./projects/netflix (4).png`
 		],
 		github: "https://github.com/line-em/react-netflix",
 		live: "https://line-em.github.io/react-netflix/"
@@ -28,10 +28,10 @@ export default [
 			"React Router DOM"
 		],
 		image: [
-			`./projects/spellbook (1).webp`,
-			`./projects/spellbook (2).webp`,
-			`./projects/spellbook (3).webp`,
-			`./projects/spellbook (4).webp`
+			`./projects/spellbook (1).png`,
+			`./projects/spellbook (2).png`,
+			`./projects/spellbook (3).png`,
+			`./projects/spellbook (4).png`
 		],
 		github: "https://github.com/line-em/dnd-spellbook/",
 		live: "https://line-em.github.io/dnd-spellbook/"
@@ -43,9 +43,9 @@ export default [
 			"Generate customized quizzes and check how you've fared! It gathers data from an API and validates it. The app has a light and a dark mode, an animated svg background, and various visual feedbacks depending on user state! It also celebrates your victory 🎉",
 		tech: ["React", "Javascript", "REST API", "CSS Grid", "CSS animation"],
 		image: [
-			`./projects/quizzical.webp`,
-			`./projects/quizzical2.webp`,
-			`./projects/quizzical3.webp`
+			`./projects/quizzical.png`,
+			`./projects/quizzical2.png`,
+			`./projects/quizzical3.png`
 		],
 		github: "https://github.com/line-em/Quizzical",
 		live: "https://line-em.github.io/Quizzical/"
@@ -64,10 +64,10 @@ export default [
 			"Modals"
 		],
 		image: [
-			`./projects/catpics (1).webp`,
-			`./projects/catpics (2).webp`,
-			`./projects/catpics (3).webp`,
-			`./projects/catpics (4).webp`
+			`./projects/catpics (1).png`,
+			`./projects/catpics (2).png`,
+			`./projects/catpics (3).png`,
+			`./projects/catpics (4).png`
 		],
 		github: "https://github.com/line-em/catpics-e-commerce",
 		live: "https://line-em.github.io/catpics-e-commerce/"
@@ -79,9 +79,9 @@ export default [
 			"Refactoring my old plain Javascript TODO app with React was enlightening. You can create, filter, edit, complete and delete data, and it also saves data to Local Storage. Lastly, you can switch between the light and dark theme.",
 		tech: ["React", "Local Storage", "CRUD", "Dark Theme"],
 		image: [
-			`./projects/todo (1).webp`,
-			`./projects/todo (2).webp`,
-			`./projects/todo (3).webp`
+			`./projects/todo (1).png`,
+			`./projects/todo (2).png`,
+			`./projects/todo (3).png`
 		],
 		github: "https://github.com/line-em/react-to-do",
 		live: "https://line-em.github.io/react-to-do/"
@@ -92,7 +92,7 @@ export default [
 		description:
 			"This Portfolio App! Made for simplicity, responsiveness, and a way to convey some cool css styles I adore. Hope you're liking it so far! You can also check other projects in my github profile, such as a Weather App. Just click on the links below to see all of them.",
 		tech: ["React", "Astro", "EmailJS", "Modals", "Responsive"],
-		image: [`./projects/portfolio.webp`, `./projects/weatherapp22.webp`],
+		image: [`./projects/portfolio.png`, `./projects/weatherapp22.png`],
 		github: "https://github.com/line-em",
 		live: "https://line-em.github.io/react-to-do/"
 	}
@@ -103,9 +103,9 @@ export default [
 	// 		"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
 	// 	tech: ["React", "Axios"],
 	// 	image: [
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp2.webp`,
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp.webp`,
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp3.webp`
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp.png`,
+	// 		`${import.meta.env.BASE_URL}/project/weatherapp3.png`
 	// 	],
 	// 	github: "https://github.com/line-em/react-weather-app",
 	// 	live: "https://line-em.github.io/react-weather-app/"
