@@ -18,17 +18,12 @@ import SocialLinks from "../components/SocialLinks.astro";
 
 <Layout title="Aline's Portfolio">
 	<Nav client:idle />
-	<main data-aos="fade-up" data-aos-duration="1000">
+	<main>
 		<Welcome />
 		<About />
 		<AboutSection />
 		<Toolkit />
-		<article
-			class="headline"
-			data-aos="fade-right"
-			data-aos-delay="50"
-			data-aos-easing="ease-in-out"
-		>
+		<article class="headline">
 			<section class="tech-grid">
 				{
 					tools.map((tool) => (

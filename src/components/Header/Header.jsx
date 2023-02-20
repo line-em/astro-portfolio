@@ -27,7 +27,7 @@ const HeaderSection = ({ icon, children }) => {
 				weight: "duotone"
 			}}
 		>
-			<div data-aos="fade-left">
+			<div>
 				<Header direction="left">
 					<Header.Icon>{icon}</Header.Icon>
 					<Header.Subtitle>{children}</Header.Subtitle>

@@ -10,7 +10,7 @@ const Card = (props) => {
 	const closeModal = () => (toggleModal ? setToggleModal(!toggleModal) : null);
 
 	return (
-		<article className="card" data-aos={`fade-${id % 2 === 1 ? "down" : "up"}`}>
+		<article className="card">
 			<section className="img-section" onClick={() => setToggleModal(true)}>
 				<img src={image[0]} alt={title} />
 			</section>
