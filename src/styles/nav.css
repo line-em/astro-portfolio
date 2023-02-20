@@ -124,7 +124,14 @@ li > a::before {
 	transition: 0.5s;
 }
 
-ul.overlay-content {
+.overlay.blur {
+	background-color: var(--white-alpha);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	transition: 0.5s;
+}
+
+.overlay-content {
 	position: relative;
 	flex-direction: column;
 	width: 100%;
@@ -135,6 +142,28 @@ ul.overlay-content {
 	padding: 0;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+.overlay-content.white-bg {
+	width: 50%;
+	background-color: var(--pure-white);
+	box-shadow: var(--shadow-elevation-low);
+	border-radius: 4px;
+	padding: 1rem 2rem;
+	margin: auto;
+	z-index: 10;
+}
+
+@media screen and (max-width: 850px) {
+	.overlay-content.white-bg {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.overlay-content.white-bg {
+		width: 95%;
+	}
 }
 
 .full-screen {
