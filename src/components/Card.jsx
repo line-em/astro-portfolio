@@ -26,7 +26,7 @@ const Card = (props) => {
 						<div key={index}>{item}</div>
 					))}
 				</section>
-				<section className="buttons-section">
+				<section className="dotted-line-section dotted-line-spacing">
 					<button onClick={() => setToggleModal(true)}>Read More</button>
 					<a href={github} target="_blank" rel="noopener noreferrer">
 						Github

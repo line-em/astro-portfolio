@@ -12,7 +12,7 @@ const Modal = ({
 	toggleModal,
 	closeModal
 }) => {
-	console.log(image);
+	const [currentImage, setCurrentImage] = React.useState(0);
 	return (
 		<section
 			className="overlay blur"
@@ -33,33 +33,55 @@ const Modal = ({
 					</button>
 				</h2>
 
-				<div className="center">
-					<div className="carousel">
-						<div className="scroll">
-							<div className="scroll-item-outer">
+				<section className="modal-content">
+					<div className="modal-project-assets">
+						{image.length > 1 && (
+							<div className="navigate">
 								{image.map((image, index) => (
-									<div className="scroll-item" id={`#${index}`}>
-										<img src={image} alt={title} />
-									</div>
+									<button
+										onClick={() => setCurrentImage(index)}
+										disabled={index === currentImage}
+									>
+										{index + 1}
+									</button>
 								))}
+							</div>
+						)}
+						<div className="carousel">
+							<div className="img-carousel">
+								<img src={image[currentImage]} alt={title} />
 							</div>
 						</div>
 					</div>
-				</div>
-				<div id="navigate">
-					{image.map((image, index) => (
-						<a href={`#${index}`}>{index + 1}</a>
-					))}
-				</div>
-				<p>{description}</p>
-
-				<section className="buttons-section">
-					<a href={github} target="_blank" rel="noopener noreferrer">
-						Github
-					</a>
-					<a href={live} target="_blank" rel="noopener noreferrer">
-						Live
-					</a>
+					<section className="project-info dotted-line-section">
+						<article className="info">
+							<div className="project-header">
+								<h3 className="text-gradient">About the Project</h3>
+								<section className="project-links" aria-hidden>
+									<a
+										href={github}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Github
+									</a>
+									<a
+										href={live}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Live
+									</a>
+								</section>
+							</div>
+							<p>{description}</p>
+							<section className="pill-section">
+								{tech.map((item, index) => (
+									<div key={index}>{item}</div>
+								))}
+							</section>
+						</article>
+					</section>
 				</section>
 			</article>
 		</section>

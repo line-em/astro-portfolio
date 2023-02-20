@@ -66,7 +66,8 @@ export default [
 		image: [
 			`./projects/catpics (1).png`,
 			`./projects/catpics (2).png`,
-			`./projects/catpics (3).png`
+			`./projects/catpics (3).png`,
+			`./projects/catpics (4).png`
 		],
 		github: "https://github.com/line-em/catpics-e-commerce",
 		live: "https://line-em.github.io/catpics-e-commerce/"
@@ -88,10 +89,11 @@ export default [
 	{
 		id: 5,
 		title: "Portfolio",
-		description: "This Portfolio App! Made for simplicity, responsiveness, etc.",
+		description:
+			"This Portfolio App! Made for simplicity, responsiveness, and a way to convey some cool css styles I adore. Hope you're liking it so far! You can also check other projects in my github profile, such as a Weather App. Just click on the links below to see all of them.",
 		tech: ["React", "Astro", "EmailJS", "Modals", "Responsive"],
-		image: [`./projects/portfolio.png`],
-		github: "https://github.com/line-em/astro-portfolio",
+		image: [`./projects/portfolio.png`, `./projects/weatherapp22.png`],
+		github: "https://github.com/line-em",
 		live: "https://line-em.github.io/react-to-do/"
 	}
 	// {
