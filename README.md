@@ -1,27 +1,8 @@
-https://mciastek.github.io/sal/?ref=vanillalist
-THIS ONE SEEMS EASIER https://github.com/locomotivemtl/locomotive-scroll
-https://maxwellito.github.io/vivus/?ref=vanillalist
-ANIMATION FOR BACKGROUND
+# Line's Astro Portfolio
 
-https://www.finisher.co/lab/header/
-https://www.vantajs.com/?effect=net
+My Portfolio 🎉
+Built with Astro, React and Emailjs.
 
-bg inspiration
-https://squircley.app/
-sal.js
-https://crayons.freshworks.com/
+## Changelog
 
-project card inspo
-https://codepen.io/seyedi/pen/zYoeLEv
-https://webdevamin.com/projects
-https://uiverse.io/satyamchaudharydev/brown-puma-94
-
-
-@media (hover: hover) and (pointer: fine) {
-a:hover {
-color: white;
-background: rebeccapurple;
-}
-}
-
-Only activates hover styles where it is supported.
+-   1.0 - Initial commit.
