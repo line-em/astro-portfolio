@@ -75,6 +75,12 @@ const { title } = Astro.props;
 		background-color: var(--white);
 	}
 
+	@media screen and (max-width: 600px) {
+		html {
+			background-size: 30vh;
+		}
+	}
+
 	::selection {
 		background-color: var(--secondary-02);
 		color: var(--pure-white);
@@ -86,18 +92,13 @@ const { title } = Astro.props;
 		background-attachment: fixed;
 		margin: 0;
 		display: grid;
-		grid-template: 100px 1fr 70px / minmax(auto, 70ch);
-		grid-template-areas:
-			"nav"
-			"content"
-			"footer";
-		/* grid-template:
+		grid-template:
 			100px 1fr 70px / minmax(0px, 1fr) minmax(auto, 70ch)
 			minmax(0px, 1fr);
 		grid-template-areas:
 			"nav nav nav"
 			". content ."
-			"footer footer footer"; */
+			"footer footer footer";
 		min-height: 100vh;
 		min-width: 100vw;
 		overflow-x: hidden;
