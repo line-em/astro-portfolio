@@ -50,7 +50,6 @@ const Nav = () => {
 					<button
 						className="mobile-menu"
 						onClick={() => setToggleMobileMenu(!toggleMobileMenu)}
-						aria-hidden
 					>
 						<X size={40} color="var(--secondary)" weight="duotone" />
 					</button>
