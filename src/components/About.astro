@@ -7,8 +7,13 @@ const sanitizedDesc = sanitizeHtml(description);
 ---
 
 <section class="about-grid">
-	<img src="./profile.png" alt="Aline Emily" />
-	<article class="headline main-info">
+	<img
+		src="./profile.png"
+		alt="Aline Emily"
+		data-aos="fade-right"
+		data-aos-delay="200"
+	/>
+	<article class="headline main-info" data-aos="fade-left" data-aos-delay="400">
 		<p set:html={sanitizedDesc} />
 		<hr />
 		<strong>Find me at...</strong>
@@ -16,7 +21,10 @@ const sanitizedDesc = sanitizeHtml(description);
 	</article>
 	{
 		funfacts.map((fact, index) => (
-			<article class="headline funfacts">
+			<article
+				class="headline funfacts"
+				data-aos={`fade-${index === 1 ? "down" : "up"}`}
+			>
 				<p>{fact}</p>
 			</article>
 		))

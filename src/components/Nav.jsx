@@ -37,7 +37,7 @@ const Nav = () => {
 	);
 
 	return (
-		<nav>
+		<nav data-aos="fade-down" data-aos-delay="100">
 			<h2 id="top">Aline Emily.</h2>
 			<button
 				className="mobile-menu"
