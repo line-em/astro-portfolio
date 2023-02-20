@@ -1,7 +1,7 @@
 # build output
 dist/
 .output/
-
+uncompressed/
 # dependencies
 node_modules/
 
