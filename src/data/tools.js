@@ -70,5 +70,12 @@ export default [
 		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
 		altText: "Tailwind CSS",
 		text: "Tailwind"
+	},
+	{
+		id: 11,
+		abbr: "Photoshop",
+		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+		altText: "Photoshop",
+		text: "Photoshop"
 	}
 ];
