@@ -105,11 +105,7 @@ export default [
 		description:
 			"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
 		tech: ["React", "Axios"],
-		image: [
-			`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
-			`${import.meta.env.BASE_URL}/project/weatherapp.png`,
-			`${import.meta.env.BASE_URL}/project/weatherapp3.png`
-		],
+		image: [`./projects/weatherapp22.webp`],
 		github: "https://github.com/line-em/react-weather-app",
 		live: "https://line-em.github.io/react-weather-app/"
 	}
