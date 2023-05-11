@@ -95,22 +95,22 @@ export default [
 		description:
 			"A static website for online reading, focusing on customization, responsiveness. and a clean and fast design. It also helps learning and analyzing, with tooltips and links where appropriate. I currently have plans on expanding this.",
 		tech: ["Next 13", "Zustand", "Postcss", "Headless CMS", "MongoDB"],
-		image: [`./projects/pp (2).png`, `./projects/pp (1).png`],
+		image: [`./projects/pp (2)b.png`, `./projects/pp (1)b.png`],
 		github: "https://github.com/line-em/pride-and-prejudice",
 		live: "https://pride-and-prejudice.vercel.app/"
+	},
+	{
+		id: 7,
+		title: "Weather App",
+		description:
+			"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
+		tech: ["React", "Axios"],
+		image: [
+			`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
+			`${import.meta.env.BASE_URL}/project/weatherapp.png`,
+			`${import.meta.env.BASE_URL}/project/weatherapp3.png`
+		],
+		github: "https://github.com/line-em/react-weather-app",
+		live: "https://line-em.github.io/react-weather-app/"
 	}
-	// {
-	// 	id: 4,
-	// 	title: "Weather App",
-	// 	description:
-	// 		"In this project I used React to create a weather app. I used an API, and it fetches the weather data and forecast for several days. I included error and loading states, and the background responds to the weather. The interface is inspired by an application window! I also learned a bit of Express.js.",
-	// 	tech: ["React", "Axios"],
-	// 	image: [
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp2.png`,
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp.png`,
-	// 		`${import.meta.env.BASE_URL}/project/weatherapp3.png`
-	// 	],
-	// 	github: "https://github.com/line-em/react-weather-app",
-	// 	live: "https://line-em.github.io/react-weather-app/"
-	// },
 ];
