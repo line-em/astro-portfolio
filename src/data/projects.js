@@ -41,7 +41,7 @@ export default [
 		title: "Quizzical",
 		description:
 			"Generate customized quizzes and check how you've fared! It gathers data from an API and validates it. The app has a light and a dark mode, an animated svg background, and various visual feedbacks depending on user state! It also celebrates your victory 🎉",
-		tech: ["React", "Javascript", "REST API", "CSS Grid", "CSS animation"],
+		tech: ["React", "Javascript", "REST API", "CSS animation"],
 		image: [
 			`./projects/quizzical.png`,
 			`./projects/quizzical2.png`,
@@ -55,14 +55,7 @@ export default [
 		title: "Cat Pics E-commerce",
 		description:
 			"This is an e-commerce website using useContext. It generates various Cat Prints with random titles and prices, with the fun Cat API! I made a CSS Modal, used the reliable React Router Dom and had fun with CSS Grid again.",
-		tech: [
-			"React",
-			"React PropTypes",
-			"React Router Dom",
-			"REST API",
-			"CSS Grid",
-			"Modals"
-		],
+		tech: ["React", "React PropTypes", "React Router Dom", "REST API", "Modals"],
 		image: [
 			`./projects/catpics (1).png`,
 			`./projects/catpics (2).png`,
@@ -77,7 +70,7 @@ export default [
 		title: "Todo App",
 		description:
 			"Refactoring my old plain Javascript TODO app with React was enlightening. You can create, filter, edit, complete and delete data, and it also saves data to Local Storage. Lastly, you can switch between the light and dark theme.",
-		tech: ["React", "Local Storage", "CRUD", "Dark Theme"],
+		tech: ["React", "Local Storage", "CRUD"],
 		image: [
 			`./projects/todo (1).png`,
 			`./projects/todo (2).png`,
@@ -91,10 +84,20 @@ export default [
 		title: "Portfolio",
 		description:
 			"This Portfolio App! Made for simplicity, responsiveness, and a way to convey some cool css styles I adore. Hope you're liking it so far! You can also check other projects in my github profile, such as a Weather App. Just click on the links below to see all of them.",
-		tech: ["React", "Astro", "EmailJS", "Modals", "Responsive"],
+		tech: ["React", "Astro", "EmailJS", "Modals"],
 		image: [`./projects/portfolio.png`, `./projects/weatherapp22.png`],
 		github: "https://github.com/line-em",
 		live: "https://line-em.github.io/react-to-do/"
+	},
+	{
+		id: 6,
+		title: "Online Reading - Pride and Prejudice.",
+		description:
+			"A static website for online reading, focusing on customization, responsiveness. and a clean and fast design. It also helps learning and analyzing, with tooltips and links where appropriate. I currently have plans on expanding this.",
+		tech: ["Next 13", "Zustand", "Postcss", "Headless CMS", "MongoDB"],
+		image: [`./projects/pp (2).png`, `./projects/pp (1).png`],
+		github: "https://github.com/line-em/pride-and-prejudice",
+		live: "https://pride-and-prejudice.vercel.app/"
 	}
 	// {
 	// 	id: 4,
