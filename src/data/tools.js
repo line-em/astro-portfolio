@@ -67,15 +67,15 @@ export default [
 	{
 		id: 10,
 		abbr: "Tailwind CSS",
-		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+		src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
 		altText: "Tailwind CSS",
 		text: "Tailwind"
 	},
 	{
 		id: 11,
-		abbr: "Photoshop",
-		src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
-		altText: "Photoshop",
-		text: "Photoshop"
+		abbr: "Next js",
+		src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+		altText: "Next js",
+		text: "Next js"
 	}
 ];

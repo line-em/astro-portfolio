@@ -94,7 +94,7 @@ export default [
 		title: "Online Reading - Pride and Prejudice.",
 		description:
 			"A static website for online reading, focusing on customization, responsiveness. and a clean and fast design. It also helps learning and analyzing, with tooltips and links where appropriate. I currently have plans on expanding this.",
-		tech: ["Next 13", "Zustand", "Postcss", "Headless CMS", "MongoDB"],
+		tech: ["Next 13", "Zustand", "Postcss", "Headless CMS"],
 		image: [`./projects/pp (2)b.png`, `./projects/pp (1)b.png`],
 		github: "https://github.com/line-em/pride-and-prejudice",
 		live: "https://pride-and-prejudice.vercel.app/"
