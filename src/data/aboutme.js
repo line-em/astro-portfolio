@@ -11,7 +11,7 @@ export default {
 
 	funfacts: [
 		`💻 My first experience with coding was a long time ago, making
-					fansites of things I liked back when I was a kid. Even before HTML5!`,
+					fansites of things I liked back when I was a kid.`,
 		`🎮 I love books, games and animation. I also already worked with games in the
 					past! Fantasy and Sci-Fi are something I adore.`,
 		`🐱 I love spending time with my cat, Leia, the rebel princess herself! She's one
