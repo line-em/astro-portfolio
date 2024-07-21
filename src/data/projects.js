@@ -4,7 +4,7 @@ export default [
 		title: "Netflix Clone",
 		description:
 			"A Netflix Clone with a personal touch. I used Tailwind and Firebase, specially Auth and Databases. I added modals, customizable homepage with various random categories, useRef, loading and error states, toast notifications, customizable alerts with Sweet Alert, extra hover and active effects like CSS transforms, and more.",
-		tech: ["React", "REST API", "Tailwind", "CSS Grid", "Firebase", "Modals"],
+		tech: ["React", "REST API", "Tailwind", "CSS Grid", "Firebase"],
 		image: [
 			`./projects/netflix (1).png`,
 			`./projects/netflix (2).png`,
@@ -21,7 +21,6 @@ export default [
 			"I wanted to explore how filtering an existing API would be like, and decided to use it for a roleplaying game called Dungeons and Dragons. You can filter through the Spellbook by choosing classes and different schools of magic, showing the results of your query, and then expanding those results in its own page. I faced several challenges - how to paginate, how to sanitize data, how to render markdown, how to avoid unnecessary API calls, among others. There are still challenges to overcome, but it's on its version 1.0 and I'm pretty proud on how it turned out so far!",
 		tech: [
 			"React",
-			"Filtering",
 			"Styled Components",
 			"REST API",
 			"Axios",
@@ -55,7 +54,7 @@ export default [
 		title: "Cat Pics E-commerce",
 		description:
 			"This is an e-commerce website using useContext. It generates various Cat Prints with random titles and prices, with the fun Cat API! I made a CSS Modal, used the reliable React Router Dom and had fun with CSS Grid again.",
-		tech: ["React", "React PropTypes", "React Router Dom", "REST API", "Modals"],
+		tech: ["React", "React PropTypes", "React Router Dom", "REST API"],
 		image: [
 			`./projects/catpics (1).png`,
 			`./projects/catpics (2).png`,

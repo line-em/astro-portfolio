@@ -31,10 +31,10 @@ export default [
 	},
 	{
 		id: 5,
-		abbr: "Styled Components",
-		src: "https://raw.githubusercontent.com/styled-components/brand/master/styled-components.svg",
-		altText: "Styled Components icon",
-		text: "Styled Components"
+		abbr: "Java & Java Spring Boot",
+		src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+		altText: "Spring Boot icon",
+		text: "Java & Java Spring Boot"
 	},
 	{
 		id: 6,
@@ -69,7 +69,7 @@ export default [
 		abbr: "Tailwind CSS",
 		src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
 		altText: "Tailwind CSS",
-		text: "Tailwind"
+		text: "Tailwind CSS, CSS-in-JS"
 	},
 	{
 		id: 11,
